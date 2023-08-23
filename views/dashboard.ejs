@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trade Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="stylesheets/trade.css">
+    <link rel="stylesheet" href="stylesheets/dashboard.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <script defer src="javascripts/dashboard.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/images.jpeg">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('header'); %>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Update Watchlist</h2>
+                    <div class="update-watchlist">
+                        <form id="updatewatchlist">
+                            <div class="form-group">
+                                <label>Fill Watch List</label>
+                                <select name="update-watch-list" id="watchlist">
+                                    <option value="GWL_1680544119489">Supertrend 1</option>
+                                    <option value="GWL_1680520499557">Intraday 2</option>
+                                    <option value="GWL_1680541977696">Top 100 3</option>
+                                    <option value="GWL_1642449627222">4</option>
+                                    <option value="GWL_1680625919712">Zerodha Holdings 5</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-success">Submit</button>
+                            <div id="updateoutput"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Clear Watchlist</h2>
+                    <div class="clear-watchlist">
+                        <form id="clarwatchlist">
+                            <div class="form-group">
+                                <label>Clear Watch List</label>
+                                <select name="clear-watch-list" id="clearwatchlist">
+                                    <option value="GWL_1680544119489">Supertrend 1</option>
+                                    <option value="GWL_1680520499557">Intraday 2</option>
+                                    <option value="GWL_1680541977696">Top 100 3</option>
+                                    <option value="GWL_1642449627222">4</option>
+                                    <option value="GWL_1680625919712">Zerodha Holdings 5</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-success">Submit</button>
+                            <div id="claroutput"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Open Multiple Tabs</h2>
+                    <div class="open-watchlist">
+                        <form id="openWatchList">
+                            <div class="form-group">
+                                <label>Open Tabs For</label>
+                                <select name="open-watch-list" id="openMulwatchlist">
+                                    <option value="GWL_1680544119489">Supertrend 1</option>
+                                    <option value="GWL_1680520499557">Intraday 2</option>
+                                    <option value="GWL_1680541977696">Top 100 3</option>
+                                    <!-- <option value="GWL_1642449627222">Stochastics 4</option> -->
+                                    <!-- <option value="D_EMA">Daily EMA</option>
+                                    <option value="FMIN_EMA">5 Min EMA</option>
+                                    <option value="Stochastics">Stochastics</option>
+                                    <option value="EMA_CROSSOVER">EMA CROSSOVER</option>
+                                    <option value="WEEKHIGH">52 WEEKHIGH</option> -->
+                                    <option value="Zerodha">Zerodha Holdings</option>
+                                    <option value="MYEMASTRATEGY">GREEN 9 EMA Strategie</option>
+                                    <option value="MYREDEMASTRATEGY">RED 9 EMA Strategie</option>
+                                    <option value="TWENTYEMASTRATEGY">Green 20 EMA Strategie</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-success">Submit</button>
+                            <div id="openoutput"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="myHTMLWrapper"></div>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>

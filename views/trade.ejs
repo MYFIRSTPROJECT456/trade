@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create Trade</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="stylesheets/trade.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script defer src="javascripts/trade.js"></script>
+  <link rel="icon" type="image/x-icon" href="/images/images.jpeg">
+</head>
+<body>
+  <div class="container">
+    <%- include('header'); %>
+    <div style="display:flex;">
+      <h4>Trade Json From</h4>
+      <button id="Storage" class="btn btn-success" onclick="clearStorage()" style="margin-left: 10px;"></button>
+    </div>
+    <form id="trade">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="switch">
+            <input type="radio" class="switch-input" name="view" value="LIMIT" id="limit" />
+            <label for="limit" class="switch-label switch-label-off">Limit</label>
+            <input type="radio" class="switch-input" name="view" value="MARKET" id="market" checked />
+            <label for="market" class="switch-label switch-label-on">Market</label>
+            <span class="switch-selection"></span>
+    
+          </div>
+        </div>
+        <div class="col-sm-10">
+          <input type="checkbox" id="gttOrder" checked>
+          <label for="gttOrder">GTT ORDER</label>
+          <div class="row">
+            <div class="col-sm-3">
+              <!-- <input type="checkbox" id="stoploss"> -->
+              <label for="slInput">SL</label>
+              <input type="text" id="slInput" name="sl">
+            </div>
+            <div class="col-sm-9">
+              <!-- <input type="checkbox" id="target"> -->
+              <label for="targetInput">Target</label>
+              <input type="text" id="targetInput" name="target">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="capital">Capital:</label>
+        <input type="text" class="form-control" id="capital" name="capital" value="100000" />
+      </div>
+      <div class="form-group autocomplete">
+        <label for="code">Code:</label>
+        <input type="text" class="form-control" id="code" name="code" onKeyUp="onKeyupMethod()" autofocus />
+      </div>
+      <div class="form-group">
+        <label for="close">Close Price:</label>
+        <input type="text" class="form-control" id="close" name="close" />
+      </div>
+      <button class="btn btn-success">Submit</button>
+    </form>
+    <hr />
+    <button class="btn btn-success" onclick="generateScript()">
+      Generate Script
+    </button>
+    <button class="btn btn-success" onclick="copyTextFromTArea()" id="myTooltip">
+      Copy to Code
+    </button>
+    <div class="form-group">
+      <pre id="output"></pre>
+    </div>
+  </div>
+</body>
+
+</html>

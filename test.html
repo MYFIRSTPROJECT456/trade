@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiple TradingView Charts</title>
+  <!-- Include TradingView Charting Library resources -->
+  <script src="path/to/tradingview/charting_library.min.js"></script>
+  <script src="path/to/tradingview/datafeeds/udf/dist/polyfills.js"></script>
+  <script src="path/to/tradingview/datafeeds/udf/dist/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="path/to/tradingview/charting_library/charting_library.css" />
+</head>
+<body>
+  <embed src="https://groww.in/charts/stocks/infosys-ltd?chartType=TradingView" 
+  width="400" 
+  height="400"
+  style="border:none;" />
+  
+  <script>
+    // Initialize the TradingView Charting Library
+    TradingView.onready(function () {
+      // Create the first chart
+      new TradingView.widget({
+        container_id: "chart1",
+        // Configure the first chart settings
+        // ...
+      });
+
+      // Create the second chart
+      new TradingView.widget({
+        container_id: "chart2",
+        // Configure the second chart settings
+        // ...
+      });
+    });
+  </script>
+</body>
+</html>
